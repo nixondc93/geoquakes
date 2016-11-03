@@ -35,6 +35,18 @@
             <div id="info">
               <h1>Earthquakes from the past week:</h1>
               <!-- <p>M 4.2 - 1km ESE of Fontana, California / 123 hours ago </p> -->
+              <div id="info">
+                <ul id="quake-list" class="list-group">
+
+                </ul>
+                <script id="quake-li-template" type="text/x-handlebars-template">
+                  {{#each quakes}}
+                  <li class="list-group-item {{this.mag}}">
+                    {{this.locationTime}}
+                  </li>
+                  {{/each}}
+                </script>
+              </div>
             </div>
           </div>
         </div>
